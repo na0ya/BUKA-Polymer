@@ -1,0 +1,32 @@
+{
+  "name": "BUKA",
+  "version": "1.0.0",
+  "authors": [
+    "na0ya"
+  ],
+  "description": "BottomUpKanbanApp, BUKA, is just an Kanban app including propose and review process. This version of BUKA is created with Polymer and Material Design.",
+  "main": "index.html",
+  "keywords": [
+    "NodeJs",
+    "Kanban",
+    "Polymer",
+    "Web Components",
+    "Material Design"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.4",
+    "core-scaffold": "Polymer/core-scaffold#~0.5.4",
+    "core-item": "Polymer/core-item#~0.5.4",
+    "paper-input": "Polymer/paper-input#~0.5.4",
+    "paper-fab": "Polymer/paper-fab#~0.5.4"
+  }
+}

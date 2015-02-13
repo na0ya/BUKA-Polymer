@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+  <link rel="import" href="bower_components/core-item/core-item.html">
+  <link rel="import" href="bower_components/paper-input/paper-input.html">
+  <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+</head>
+<body fullbleed unresolved>
+  <template is="auto-binding">
+  <core-scaffold>
+    <core-header-panel navigation flex>
+      <core-toolbar class="tall">      
+      </core-toolbar>
+
+      <section layout vertical id="onlineList">
+        <template repeat="{{item in items}}">
+          <core-item icon="{{item.icon}}" label="{{item.title}}"></core-item>
+        </template>
+      </section>
+    </core-header-panel>
+
+
+    <div tool layout horizontal flex>
+      <span flex>Kitteh Anonymous</span>
+      <core-icon icon="account-circle"></core-icon>
+      <span></span>
+    </div>
+
+    <div class="send-message" layout horizontal>
+      <paper-input flex label="Type message..." id="input" value="{{ input }}"></paper-input>
+      <paper-fab icon="send" id="sendButton" on-tap="{{ sendMyMessage }}"></paper-fab>
+    </div>
+  </core-scaffold>
+  </template>
+
+
+  <script>
+    var template = document.querySelector('template[is=auto-binding]');
+    template.items = [
+      {title: 'Uno', icon: 'cloud'},
+      {title: 'Dos', icon: 'polymer'},
+      {title: 'Tres', icon: 'favorite'}
+    ];
+  </script>
+</body>
+</html>
+
